@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:67b9201153f9f2355b71f004@squarespace.com
+DTSTAMP:20250408T232613Z
+DTSTART:20250405T143000Z
+DTEND:20250405T183000Z
+SUMMARY:Intro to Metalsmithing: Tree of Life Pendant (Inclusion Series)
+GEO:40.720756;-74.000761
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:6421cd9c8e50b70564fe649f@squarespace.com
+DTSTAMP:20230327T171204Z
+DTSTART:20230430T140000Z
+DTEND:20230430T190000Z
+SUMMARY:Intermediate Bladesmithing: Railroad Spike to Knife
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

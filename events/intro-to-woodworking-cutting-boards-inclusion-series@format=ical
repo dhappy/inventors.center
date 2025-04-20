@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:657ce75c44f0e7302fc49a4e@squarespace.com
+DTSTAMP:20231219T204810Z
+DTSTART:20240203T150000Z
+DTEND:20240203T190000Z
+SUMMARY:Intro to Woodworking: Cutting Boards (Inclusion Series) Day 1/2
+GEO:36.546471;-82.5629
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR

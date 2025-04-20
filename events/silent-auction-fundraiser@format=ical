@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:673be1adc397a5541734ddc5@squarespace.com
+DTSTAMP:20241119T005747Z
+DTSTART:20241205T230000Z
+DTEND:20241206T020000Z
+SUMMARY:Silent Auction Fundraiser
+GEO:40.720756;-74.000761
+LOCATION:6ix Grist and Grind Brew House\, 455 West Sullivan Street\, Kingsp
+ ort\, TN\, 37660\, United States
+END:VEVENT
+END:VCALENDAR

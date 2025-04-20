@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:67bcff5d68ece71aa6bb998c@squarespace.com
+DTSTAMP:20250331T223001Z
+DTSTART:20250518T193000Z
+DTEND:20250518T220000Z
+SUMMARY:First NETN Jewelry Makers and Metalsmiths Meet Up
+GEO:40.720756;-74.000761
+LOCATION:The Inventor Center\, 118 Shelby St\, Kingsport\, United States
+END:VEVENT
+END:VCALENDAR

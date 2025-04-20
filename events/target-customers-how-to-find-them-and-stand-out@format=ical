@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:64a33a908889dc2c78e267a4@squarespace.com
+DTSTAMP:20230703T211945Z
+DTSTART:20230821T220000Z
+DTEND:20230821T230000Z
+SUMMARY:Target Customers: How to Find Them and Stand Out!
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

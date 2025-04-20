@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:643469f21d539c3d0608ebfe@squarespace.com
+DTSTAMP:20230410T201042Z
+DTSTART:20230501T220000Z
+DTEND:20230501T233000Z
+SUMMARY:Creating Your Artist Bio (Promote Yourself: Supper Seminars)
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

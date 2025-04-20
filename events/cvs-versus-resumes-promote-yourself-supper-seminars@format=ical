@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:64346d5138f42c3471520bb7@squarespace.com
+DTSTAMP:20230410T201719Z
+DTSTART:20230502T220000Z
+DTEND:20230503T000000Z
+SUMMARY:CVs versus Resumes (Promote Yourself: Supper Seminars)
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:6643f46b884a6d139e695e1f@squarespace.com
+DTSTAMP:20240517T224010Z
+DTSTART:20240621T220000Z
+DTEND:20240622T003000Z
+SUMMARY:Ukrainian Egg Dyeing (Pysanky): 40 Triangles Method
+GEO:40.720756;-74.000761
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR
