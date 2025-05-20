@@ -1,0 +1,118 @@
+<svg
+  version="1.1"
+  viewBox="15 -28 765 765" xmlns="http://www.w3.org/2000/svg">
+  <title>The Inventors’ Center</title>
+  <defs>
+    <style>
+      :root {
+        color-mode: light dark;
+      }
+      path {
+        stroke: var(--color, brown);
+        stroke-linecap: round;
+      }
+      .brain {
+        stroke-width: 21;
+      }
+      .brain, .tendril {
+        fill-opacity: var(--opacity, 1);
+        stroke-opacity: var(--opacity, 1);
+      }
+      .bg {
+        fill: var(--bg, white);
+      }
+      .texture {
+        fill: none;
+      }
+      .tendril {
+        fill: none;
+        stroke-width: 7;
+      }
+      circle {
+        stroke-dasharray: 10.5, 10.5;
+        stroke-width: 7;
+        fill: var(--bg, white);
+        transform-origin: center;
+        transform-box: stroke-box;
+      }
+      circle.left {
+        stroke: #654E9C;
+      }
+      circle.right {
+        stroke: #f18b2f;
+        animation-delay: 1.5s;
+      }
+      .small {
+        --opacity: 0.2;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .small.left {
+        --bg: #F18B2F;
+      }
+      .small.right {
+        --bg: #654E9C;
+      }
+      #spin {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      @keyframes wobble {
+        from { rotate: 0deg }
+        25% { rotate: 10deg }
+        75% {rotate: -10deg }
+        to { rotate: 0deg }
+      }
+      @keyframes spin {
+        from { rotate: 0deg }
+        to { rotate: 360deg }
+      }
+      @media(prefers-color-scheme: dark) {
+        #main { --bg: #333 }
+        .bg { --bg: #AAA }
+      }
+    </style>
+    <g id="noodled-brain">
+      <path class="brain bg" d="m244.96 53.725-1.1578 418.57c-0.0813 29.37-77.545 96.408-121.4-5.5911-83.18 8.7904-82.794-51.259-63.523-96.866-45.765-12.293-81.822-30.318-60.906-87.791-8.7872-9.4746-30.015-73.619 13.668-81.784-14.088-28.334-1.1095-76.131 51.854-85.026-37.1-1.1268-11.158-65.59 60.831-60.347 3.383-53.106 34.431-60.776 68.758-58.815 38.077 2.1749 51.934 37.952 51.88 57.647z"/>
+      <g>
+        <path class="brain texture" d="m52.552 115.24c22.7-1.1551 42.284 4.3101 57.259 19.57"/>
+        <path class="brain texture" d="m106.55 54.723c19 0.46649 46.299 26.576 47.112 33.703"/>
+        <path class="brain texture" d="m68.134 177.94c16.77 24.676 34.369 48.106 75.742 35.878"/>
+        <path class="brain texture" d="m-7.9693 269.63c2.9741 3.3204 4.876 11.272 8.5194 14.345 16.719 14.102 41.035 19.974 61.786 18.634"/>
+        <path class="brain texture" d="m54.363 371.46c8.2605-4.7738 25.602-10.498 38.514-22.52 10.638-9.9046 17.221-26.18 22.369-31.477 20.187-20.772 37.973-21.256 71.755-11.234"/>
+        <path class="brain texture" d="m244.98 336.31c-21.496 35.887-47.43 36.39-66.682 41.314"/>
+        <path class="brain texture" d="m142.06 416.03c-14.89 18.3-16.889 34.452-19.207 51.823"/>
+        <path class="brain texture" d="m222.52 413.14c5.5451 5.9181 18.778 19.913 21.744 34.428"/>
+        <path class="brain texture" d="m181.57 137.35c18.466-0.49296 60.624 20.344 61.926 46.295l1.1317 22.561"/>
+        <path class="brain texture" d="m7.248 197.87 16.308 22.106"/>
+      </g>
+      <g>
+        <path class="tendril" d="m54.411 80.755c-28.031-11.09-35.462-26.675-43.04-58.218"/>
+        <path class="tendril" d="m-84.39 257.03c16.339-13.773 25.455-33.248 72.794-22.547"/>
+        <path class="tendril" d="m24.479 502.47c23.719-11.632 53.308-21.43 50.892-41.229"/>
+        <path class="tendril" d="m207.43 515.36c4.2774 31.045 27.573 57.863 46.382 85.678"/>
+      </g>
+    </g>
+    <g id="logo">
+      <g id="bg">
+        <circle class="left" cx="400" cy="355" r="355"/>
+        <circle class="right" cx="400" cy="355" r="355"/>
+      </g>
+      <g id="mirror">
+        <use href="#noodled-brain" x="135" y="99" style="--color: #F18B2F;"/>
+        <use href="#noodled-brain" x="-660" y="-620" style="--color: #654E9C; transform: scale(-1, -1)"/>
+      </g>
+    </g>
+  </defs>
+  <g id="spin">
+    <use id="main" href="#logo"/>
+    <use class="small right" href="#logo" transform="translate(0,-355) scale(0.07) rotate(90)"/>
+    <use class="small right" href="#logo" transform="translate(245,-250) scale(0.07) rotate(-45)"/>
+    <use class="small right" href="#logo" transform="translate(355,0) scale(0.07)"/>
+    <use class="small right" href="#logo" transform="translate(245,250) scale(0.07) rotate(45)"/>
+    <use class="small left" href="#logo" transform="translate(0,355) scale(0.07) rotate(-90)"/>
+    <use class="small left" href="#logo" transform="translate(-245,250) scale(0.07) rotate(-45)"/>
+    <use class="small left" href="#logo" transform="translate(-355,0) scale(0.07)"/>
+    <use class="small left" href="#logo" transform="translate(-245,-250) scale(0.07) rotate(45)"/>
+  </g>
+</svg>
