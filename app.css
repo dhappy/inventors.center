@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Allegrand;
+  src: url('Allegrand.woff') type(woff);
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+a {
+  transition: filter 0.25s;
+}
+
+a:hover {
+  filter: hue-rotate(90deg);
+}
