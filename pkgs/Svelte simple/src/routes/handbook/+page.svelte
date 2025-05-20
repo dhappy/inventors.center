@@ -1,24 +1,37 @@
 <script lang="ts">
   import { page } from '$app/state'
 
-  const params = {
-    name: page.url.searchParams.get('name'),
-    date: page.url.searchParams.get('date'),
-    phone: page.url.searchParams.get('phone'),
+  class Params {
+    name = $state<string | null>(null)
+    date = $state<Date | null>(null)
+    phone = $state<string | null>(null)
   }
-  let name = $state<string | null>(
-    params.name ?? null
-  )
-  let date = $state<Date | null>(
-    params.date ? (
-      /\d{4}[-/⁄]\d{1,2}[-/⁄]\d{1,2}/.test(params.date) ? (
-        new Date(params.date)
-      ) : (new Date())
-    ) : null
-  )
-  let phone = $state<string | null>(
-    params.phone ?? null
-  )
+  const param = new Params()
+
+  $effect(() => {
+    ['name', 'date', 'phone'].forEach((variable) => {
+      const val = page.url.searchParams.get(variable)
+      if(val) {
+        switch(variable) {
+          case 'name': case 'phone': {
+            param[variable] = val
+            break
+          }
+          case 'date': {
+            param[variable] = (
+              /\d{4}[-/⁄]\d{1,2}[-/⁄]\d{1,2}/.test(val) ? (
+                new Date(val)
+              ) : (new Date())
+            )
+            break
+          }
+          default: {
+            console.warn(`Unknown Variable: "${variable}"`)
+          }
+        }
+      }
+    })
+  })
 </script>
 
 <svelte:head>
@@ -382,8 +395,8 @@
       <li>
         <p>
           Duration of Agreement & Termination. This Agreement is a Membership and shall commence on
-          {#if date}
-            <strong>{date.toLocaleDateString(
+          {#if param.date}
+            <strong>{param.date.toLocaleDateString(
               undefined,
               { year: 'numeric', month: 'long', day: 'numeric' },
             )}</strong>
@@ -446,16 +459,16 @@
       <li>
         <span>
           Printed Name:
-          {#if name}
-            <strong>{name}</strong>
+          {#if param.name}
+            <strong>{param.name}</strong>
           {:else}
             ____________________________
           {/if}
         </span>
         <span>
           Date:
-          {#if date}
-            <strong>{date.toLocaleDateString(
+          {#if param.date}
+            <strong>{param.date.toLocaleDateString(
               undefined,
               { year: 'numeric', month: 'long', day: 'numeric' },
             )}</strong>
@@ -467,8 +480,8 @@
       <li>Signature: _________________________________________</li>
       <li>
         Phone:
-        {#if phone}
-          <strong>{phone}</strong>
+        {#if param.phone}
+          <strong>{param.phone}</strong>
         {:else}
           ____________________
         {/if}
