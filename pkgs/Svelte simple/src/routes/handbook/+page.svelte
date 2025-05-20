@@ -84,7 +84,6 @@
   <section id="privacy">
     <h2>Privacy Policy for Members</h2>
 
-    <h3>Rationale:</h3>
     <p>In order to foster a safe and supportive member atmosphere, we ask all members to abide by these privacy policies. Please also see our Privacy Policy for how the IC itself protects members’ personal data.</p>
 
     <h3>Personal Responsibility:</h3>
@@ -94,14 +93,16 @@
 
     <p>This means that the same sort of data that we take care to protect our members should be protected by you as well.</p>
 
-    <h3>Photography: Still or Video:</h3>
-    <p>Not everyone shares the same attitude towards having their picture online. Please ask in advance before photographing people.</p>
+    <section>
+      <h3>Photography: Still or Video:</h3>
+      <p>Not everyone shares the same attitude towards having their picture online. Please ask in advance before photographing people.</p>
 
-    <p>Additionally, some people may be working on projects that they don't wish to get publicized early.</p>
+      <p>Additionally, some people may be working on projects that they don't wish to get publicized early.</p>
 
-    <p>Please ask before photographing other members' work or before describing it in public. <q class="parens">(If you have work that you absolutely don't want to be photographed while you're not around, consider covering it. Even with the best of intentions, it might otherwise wind up in the background of some unrelated shot)</q>.</p>
+      <p>Please ask before photographing other members' work or before describing it in public. <q class="parens">(If you have work that you absolutely don't want to be photographed while you're not around, consider covering it. Even with the best of intentions, it might otherwise wind up in the background of some unrelated shot)</q>.</p>
 
-    <p>We request that permission is obtained from people before they are recorded or photographed, and if the pictures/video/audio/etc will be posted anywhere online, permission to do that should also be obtained. Please refrain from taking pictures of in-progress projects; only projects clearly on display can be photographed.</p>
+      <p>We request that permission is obtained from people before they are recorded or photographed, and if the pictures/video/audio/etc will be posted anywhere online, permission to do that should also be obtained. Please refrain from taking pictures of in-progress projects; only projects clearly on display can be photographed.</p>
+    </section>
   </section>
   <section id="data">
     <h2>Data</h2>
@@ -115,7 +116,7 @@
   <section id="net">
     <h2>Acceptable Use of our Network</h2>
 
-    <p>Why do we have these policies? We need to make sure that we:</p>
+    <p class="intro">Why do we have these policies? We need to make sure that we:</p>
     <ul>
       <li>Are legally protected</li>
       <li>Do not have to spend time policing members' behavior</li>
@@ -128,75 +129,87 @@
 
     <p>If you have any questions about how to be a good neighbor, or you'd like advice on how to put your particular device on the network, please ask us. We're here to help.</p>
 
-    <h3>General Considerations</h3>
+    <section>
+      <h3>General Considerations</h3>
 
-    <p>You are expected to honor our privacy policy, which includes not intercepting communications not intended for you, not disrupting others' communications, and so forth.</p>
+      <p>You are expected to honor our privacy policy, which includes not intercepting communications not intended for you, not disrupting others' communications, and so forth.</p>
 
-    <p>This also includes not trying to connect to machines for which you have no authorization. Such attempts, or use of scanning tools to discover such machines, is prohibited. If you'd like to know how the network works, please don't look like you're attacking it — just ask instead.</p>
+      <p>This also includes not trying to connect to machines for which you have no authorization. Such attempts, or use of scanning tools to discover such machines, is prohibited. If you'd like to know how the network works, please don't look like you're attacking it — just ask instead.</p>
+    </section>
   </section>
   <section id="wifi">
     <h2>Wireless Network</h2>
 
     <p>The network is run on a best-effort basis. This means that we will make every effort to keep it up at all times <q class="parens">(the IC depends on it for its own operations as well)</q> but we cannot make any guarantees about its  availability. If you have some business need for an absolutely reliable network, you should arrange to pay someone for that service. We are not in that business.</p>
 
-    <h3>Bandwidth:</h3>
+    <section>
+      <h3>Bandwidth:</h3>
 
-    <p>You are expected to use reasonable shared-bandwidth behavior. This means not continuously using large amounts of the shared bandwidth. We would like to do this on the honor system and not have to enforce limits. That means:</p>
+      <p>You are expected to use reasonable shared-bandwidth behavior. This means not continuously using large amounts of the shared bandwidth. We would like to do this on the honor system and not have to enforce limits. That means:</p>
 
-    <ul>
-      <li>No unattended BitTorrent. <q class="parens">(If you'd like to torrent down a Debian release and then turn it off, that's okay, but don't leave it serving after you're done.)</q></li>
-      <li>Nothing that could cause the RIAA or MPAA to serve us papers. <q class="parens">(No violation of copyrights: don't torrent a movie.)</q></li>
-      <li>
-        <p>Nothing that could cause us to have to handle a DMCA takedown order. <q class="parens">(Again, no violation of copyright: don't set up a warez site.)</q></p>
-        <p>As a rule of thumb, expect that our total available bandwidth is equivalent to a medium-quality cable-modem connection <q class="parens">(because it is a cable-modem connection)</q>. But unlike your connection at home, this one is shared by dozens of people and devices.</p>
-      </li>
-    </ul>
+      <ul>
+        <li>No unattended BitTorrent. <q class="parens">(If you'd like to torrent down a Debian release and then turn it off, that's okay, but don't leave it serving after you're done.)</q></li>
+        <li>Nothing that could cause the RIAA or MPAA to serve us papers. <q class="parens">(No violation of copyrights: don't torrent a movie.)</q></li>
+        <li>
+          <p>Nothing that could cause us to have to handle a DMCA takedown order. <q class="parens">(Again, no violation of copyright: don't set up a warez site.)</q></p>
+          <p>As a rule of thumb, expect that our total available bandwidth is equivalent to a medium-quality cable-modem connection <q class="parens">(because it is a cable-modem connection)</q>. But unlike your connection at home, this one is shared by dozens of people and devices.</p>
+        </li>
+      </ul>
+    </section>
   </section>
   <section id="trash">
     <h2>Trash and Materials</h2>
 
-    <h3>Trash:</h3>
+    <section>
+      <h3>Trash:</h3>
 
-    <p>In general, be considerate of yourself and your fellow members when using the trash. Here are some pro-tips:</p>
+      <p>In general, be considerate of yourself and your fellow members when using the trash. Here are some pro-tips:</p>
 
-    <ul>
-      <li>Do not overfill the trash cans so that they are not too heavy or potentially dangerous. Do not put anything sharp in bagged trash. Wrap sharp things in cardboard and tape.</li>
-      <li>Do not overfill bags; keep in mind bagged trash needs to be lifted to shoulder-height into the dumpster.</li>
-      <li>Do not put electronic waste in the trash or dumpster. Do not put hazardous waste in the trash or dumpster.</li>
-      <li>Do not put paint in the dumpster without using a hardener powder for paint disposal. It's really cheap at Home Depot.</li>
-    </ul>
+      <ul>
+        <li>Do not overfill the trash cans so that they are not too heavy or potentially dangerous. Do not put anything sharp in bagged trash. Wrap sharp things in cardboard and tape.</li>
+        <li>Do not overfill bags; keep in mind bagged trash needs to be lifted to shoulder-height into the dumpster.</li>
+        <li>Do not put electronic waste in the trash or dumpster. Do not put hazardous waste in the trash or dumpster.</li>
+        <li>Do not put paint in the dumpster without using a hardener powder for paint disposal. It's really cheap at Home Depot.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Dumpster Location:</h3>
 
-    <h3>Dumpster Location:</h3>
+      <p>The dumpster is located outside of The Inventors’ Center. To get to the dumpster, go out the garage door in the woodshop. We have a large green dumpster, and one rolling trash can.</p>
+    </section>
+    <section>
+      <h3>Bulk Trash:</h3>
 
-    <p>The dumpster is located outside of The Inventors’ Center. To get to the dumpster, go out the garage door in the woodshop. We have a large green dumpster, and one rolling trash can.</p>
+      <p>If you have a large object or objects to dispose of, please bring them directly to the city dumpster.</p>
+    </section>
+    <section>
+      <h3>Perishables <q class="parens">(food)</q>:</h3>
 
-    <h3>Bulk Trash:</h3>
+      <p>All food and drink should go in the trash can in the main room which has a lid! Please pour out drinks in the sink before disposing of the cup.</p>
+    </section>
+    <section>
+      <h3>Cardboard:</h3>
 
-    <p>If you have a large object or objects to dispose of, please bring them directly to the city dumpster.</p>
+      <p>Please break down boxes prior to throwing them into the bin to conserve space. Cardboard is useful also for testing on the laser cutter and for spray painting – usable pieces can be kept above the planer for painting, or cut down into 1x2’ pieces for the laser.</p>
+    </section>
+    <section>
+      <h3>Wood:</h3>
 
-    <h3>Perishables <q class="parens">(food)</q>:</h3>
+      <p>Please place scrap wood at the bin next to the entrance of the wood shop. Cut it up into small manageable pieces. Exceptionally useful, true, and undamaged scrap of linear wood <q class="parens">(not sheet goods)</q> can be sorted by length in wood storage. All wood will go in the dumpster. Large projects or pieces of wood fall under <q>bulk trash</q>.</p>
+    </section>
+    <section>
+      <h3>Metal:</h3>
 
-    <p>All food and drink should go in the trash can in the main room which has a lid! Please pour out drinks in the sink before disposing of the cup.</p>
+      <p>We have a scrap bin that is picked up periodically in the welding shop. Please make sure items are safely in the container.</p>
 
-    <h3>Cardboard:</h3>
-
-    <p>Please break down boxes prior to throwing them into the bin to conserve space. Cardboard is useful also for testing on the laser cutter and for spray painting – usable pieces can be kept above the planer for painting, or cut down into 1x2’ pieces for the laser.</p>
-
-    <h3>Wood:</h3>
-
-    <p>Please place scrap wood at the bin next to the entrance of the wood shop. Cut it up into small manageable pieces. Exceptionally useful, true, and undamaged scrap of linear wood <q class="parens">(not sheet goods)</q> can be sorted by length in wood storage. All wood will go in the dumpster. Large projects or pieces of wood fall under <q>bulk trash</q>.</p>
-
-    <h3>Metal:</h3>
-
-    <p>We have a scrap bin that is picked up periodically in the welding shop. Please make sure items are safely in the container.</p>
+    </section>
   </section>
   <section id="tidy">
     <h2>Tidy Space Policy</h2>
-    <p>Why do we need a policy for having a tidy space?</p>
 
     <p>With almost an acre of space, everything needs to be taken care of. The overview for the need of this set of guidelines is this: a single member leaves a single item in a shared space, like an aisle or the social area. If only you left a single item out, it would be okay. If our 70+ members and visitors who visit the makerspace each week all left a single thing out, we would be buried in stuff. We have requirements to maintain egress paths from the fire department. We have accessibility requirements from the ADA. We need to maintain a good faith effort of keeping our space clean.</p>
 
-    <p>Abandoned property:</p>
+    <h3>Abandoned Property:</h3>
 
     <ul>
       <li>Things left around that are unlabeled are abandoned property.</li>
@@ -206,7 +219,7 @@
       <li>Things that look like trash will be thrown out <q class="parens">(wood scraps, electronic parts, food, etc)</q>.</li>
     </ul>
 
-    <h3>Moving Other Peoples’ Work</h3>
+    <h3>Moving Other Peoples’ Work:</h3>
 
     <ul>
       <li>All unattended projects should have a note detailing when you will return to move it, how someone else might move it safely, and special considerations i.e. "the paint will be dry by 4 pm Friday."</li>
@@ -219,6 +232,7 @@
     <h2>Deliveries</h2>
 
     <h3>Incoming:</h3>
+
     <p>You need to either be present or make arrangements with another member to receive the delivery. Leaving things at the load-in bay is not cool. Wood deliveries can be made in the Alley behind the makerspace, metal deliveries can be made in the designated loading zone on the Shelby St. end of the makerspace.</p>
     <ul>
       <li>We DO NOT have a loading dock. We cannot accept dock height trucks only Lift-gate trucks.</li>
@@ -238,7 +252,7 @@
 
     <h3>Eye Protection:</h3>
     <p>Eye protection protects your eyes from sawdust, splinters, sparks, and other foreign objects.</p>
-    <p>Different types of eye protection include:</p>
+    <p class="intro">Different types of eye protection include:</p>
     <ul>
       <li>Safety glasses.</li>
       <li>Cover goggles.</li>
@@ -300,7 +314,7 @@
 
     <h3>To Keep:</h3>
     <p>Several consumable safety supplies are available at the safety station near the woodshop.</p>
-    <p>These include:</p>
+    <p class="intro">These include:</p>
     <ul>
       <li>Foam earplugs</li>
       <li>Dust masks</li>
@@ -310,7 +324,7 @@
 
     <h3>PPE You May Need to Provide or Bring:</h3>
     <p>Certain types of PPE are not provided by The Inventors’ Center and may need to be purchased.</p>
-    <p>These include:</p>
+    <p class="intro">These include:</p>
     <ul>
       <li>Chemical resistant gloves</li>
       <li>Respirators</li>
@@ -403,6 +417,10 @@
     & h2 {
       font-size: 24pt;
       text-align: center;
+      margin-block: 0rem 0.5rem;
+    }
+    & h3 {
+      margin-block: 1rem 0.5rem;
     }
     :where(h2, h3) {
       color: light-dark(#634B96, #F08C3D);
@@ -425,5 +443,39 @@
   section {
     margin-block: 6rem;
     break-after: page;
+
+    & section {
+      margin-block: 1rem;
+      break-after: auto;
+    }
+  }
+  ul, li, p {
+    orphans: 3;
+    widows: 3;
+  }
+  p {
+    text-indent: 1.5em;
+
+    &.first, &:first-of-type {
+      text-indent: 0;
+    }
+
+    &.intro {
+      margin-block-end: 0;
+
+      & + ul {
+        margin-block-start: 0;
+      }
+    }
+  }
+  @media print {
+    main {
+      font-size: 12.5pt;
+      margin-block: 0;
+    }
+    p {
+      margin-block: 0 0.25rem;
+      padding: 0;
+    }
   }
 </style>
