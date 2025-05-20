@@ -1,3 +1,26 @@
+<script lang="ts">
+  import { page } from '$app/state'
+
+  const params = {
+    name: page.url.searchParams.get('name'),
+    date: page.url.searchParams.get('date'),
+    phone: page.url.searchParams.get('phone'),
+  }
+  let name = $state<string | null>(
+    params.name ?? null
+  )
+  let date = $state<Date | null>(
+    params.date ? (
+      /\d{4}[-/⁄]\d{1,2}[-/⁄]\d{1,2}/.test(params.date) ? (
+        new Date(params.date)
+      ) : (new Date())
+    ) : null
+  )
+  let phone = $state<string | null>(
+    params.phone ?? null
+  )
+</script>
+
 <svelte:head>
   <title>IC: Handbook</title>
 </svelte:head>
@@ -86,13 +109,14 @@
 
     <p>In order to foster a safe and supportive member atmosphere, we ask all members to abide by these privacy policies. Please also see our Privacy Policy for how the IC itself protects members’ personal data.</p>
 
-    <h3>Personal Responsibility:</h3>
-    <p>We expect our members to protect private and confidential information, especially that which affects the well-being of others. This can include pictures or names of our other members <q class="parens">(some of whom go by names other than their so-called "legal" names)</q>, descriptions of their work, or the contents of their communications. The sections below expand on this philosophy.</p>
+    <section>
+      <h3>Personal Responsibility:</h3>
+      <p>We expect our members to protect private and confidential information, especially that which affects the well-being of others. This can include pictures or names of our other members <q class="parens">(some of whom go by names other than their so-called "legal" names)</q>, descriptions of their work, or the contents of their communications. The sections below expand on this philosophy.</p>
 
-    <p>We also expect you abide personally by the same provisions that the IC abides by in general.</p>
+      <p>We also expect you abide personally by the same provisions that the IC abides by in general.</p>
 
-    <p>This means that the same sort of data that we take care to protect our members should be protected by you as well.</p>
-
+      <p>This means that the same sort of data that we take care to protect our members should be protected by you as well.</p>
+    </section>
     <section>
       <h3>Photography: Still or Video:</h3>
       <p>Not everyone shares the same attitude towards having their picture online. Please ask in advance before photographing people.</p>
@@ -235,7 +259,7 @@
 
     <p>You need to either be present or make arrangements with another member to receive the delivery. Leaving things at the load-in bay is not cool. Wood deliveries can be made in the Alley behind the makerspace, metal deliveries can be made in the designated loading zone on the Shelby St. end of the makerspace.</p>
     <ul>
-      <li>We DO NOT have a loading dock. We cannot accept dock height trucks only Lift-gate trucks.</li>
+      <li>We <span class="warn"></span> have a loading dock. We cannot accept dock height trucks only Lift-gate trucks.</li>
       <li>Plan deliveries around projects. If you are bringing in 20 sticks of 2 inch tube for a project next week, have a plan to cut it up the day it comes in. Do not expect to use a cart in the aisle for storage for a week.</li>
       <li>If you bring things in, take it of the cart and return the cart once you get to the workshop you are in.</li>
       <li>Take care of your shipping materials, like boxes, pallets, and foam. Pallets should be cut up. Cardboard should be broken down.</li>
@@ -250,96 +274,123 @@
   <section id="ppe">
     <h2>Personal Protective Equipment</h2>
 
-    <h3>Eye Protection:</h3>
-    <p>Eye protection protects your eyes from sawdust, splinters, sparks, and other foreign objects.</p>
-    <p class="intro">Different types of eye protection include:</p>
-    <ul>
-      <li>Safety glasses.</li>
-      <li>Cover goggles.</li>
-      <li>Prescription safety glasses with side shields.</li>
-      <li>Face shields.</li>
-    </ul>
-    <p>Regular prescription glasses without side shields are not an acceptable form of eye protection.</p>
-    <p>However, most opticians can get OSHA-grade prescription eyeglasses, so check your local eyeglass store for info.</p>
-
-    <h3>Foot Protection:</h3>
-    <p>Foot injuries can occur when working in shops due to dropped objects, trip hazards, or sparks.</p>
-    <ul>
-      <li>Close-toed shoes will offer a degree of protection from dropped objects, trip hazards, and sparks.</li>
-      <li>Good-quality work boots with steel toes or other protective qualities are the best option for preventing foot injuries.</li>
-    </ul>
-
-    <h3>Hearing Protection:</h3>
-    <p>The National Institute on Deafness and Other Communication Disorders <q class="parens">(NIDOCD)</q> warns that long or repeated exposure to sounds at or above 85 decibels can cause hearing loss. Wearing hearing protection helps prevent both short- and long-term hearing damage due to harmful decibel levels, and also prevents debris from entering the ear.</p>
-    <ul>
-      <li>Disposable foam earplugs are a good choice for blocking sound and, when welding, for keeping sparks from traveling down the ear canal.</li>
-      <li>Earmuffs are usually the best choice for hearing protection, as they will keep all foreign objects out of the ear.</li>
-      <li>When working in areas with very high noise, both earplugs and earmuffs can be worn to provide better protection.</li>
-      <li>Exercise caution and be aware of your surroundings when wearing hearing protection, since it will be harder to hear people talking, auditory alerts on machines, and alarms.</li>
-    </ul>
-
-    <h3>Hand Protection:</h3>
-    <p>Gloves can prevent injuries in certain situations while increasing the likelihood of injury in others.</p>
-    <ul>
-      <li>Gloves must not be worn when using tools such as bandsaws, lathes, drill press, and grinders.</li>
-    </ul>
-    <p>If a glove gets caught in a tool you can be pulled in and seriously injured or killed.</p>
-    <ul>
-      <li>Leather work gloves are ideal when handling material to protect from splinters and cuts. They often have nylon backs and should not be used for welding or handling hot metal. MIG welding gloves are made of heavy material to resist sparks and heat.</li>
-      <li>Oxy-acetylene fuel gloves are slightly lighter to resist heat while allowing for greater control of the filler wire.</li>
-      <li>TIG gloves are the thinnest and allow finer control of the filler material. They are more sensitive to heat.</li>
-      <li>Rubber gloves may be needed when working with chemicals. Ensure you use non-latex gloves if you or someone you are working with has a latex allergy.</li>
-    </ul>
-
-    <h3>Respiratory Protection:</h3>
-    <p>Airborne contaminants pose a serious risk to health. Particulates less than 10 micrometers, known as PM10, can cause nose and throat irritation.</p>
-    <p>Particulates less than 2.5 micrometers, known as PM2.5, can penetrate deep into the lungs and cross into the bloodstream, causing health problems such as asthma, lung cancer, cardiovascular disease, and premature death.</p>
-    <p>Wood dust can be as small as .01 micrometers and is recognized by the US National Institutes of Health as a known human carcinogen. Respiratory protection helps prevent the inhalation of harmful particulates, chemicals, and gasses.</p>
-    <p>Respiratory protection can range from a disposable N95 face mask to a reusable full face supplied air respirator and should be selected based on the type of material you will be working with. The National Institute for Occupational Safety and Health <q class="parens">(NIOSH)</q> sets standards for respiratory protective equipment and is a good source for information on respiratory protection.</p>
+    <section>
+      <h3>Eye Protection:</h3>
+      <p>Eye protection protects your eyes from sawdust, splinters, sparks, and other foreign objects.</p>
+      <p class="intro">Different types of eye protection include:</p>
+      <ul>
+        <li>Safety glasses.</li>
+        <li>Cover goggles.</li>
+        <li>Prescription safety glasses with side shields.</li>
+        <li>Face shields.</li>
+      </ul>
+      <p>Regular prescription glasses without side shields are not an acceptable form of eye protection.</p>
+      <p>However, most opticians can get OSHA-grade prescription eyeglasses, so check your local eyeglass store for info.</p>
+    </section>
+    <section>
+      <h3>Foot Protection:</h3>
+      <p>Foot injuries can occur when working in shops due to dropped objects, trip hazards, or sparks.</p>
+      <ul>
+        <li>Close-toed shoes will offer a degree of protection from dropped objects, trip hazards, and sparks.</li>
+        <li>Good-quality work boots with steel toes or other protective qualities are the best option for preventing foot injuries.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Hearing Protection:</h3>
+      <p>The National Institute on Deafness and Other Communication Disorders <q class="parens">(NIDOCD)</q> warns that long or repeated exposure to sounds at or above 85 decibels can cause hearing loss. Wearing hearing protection helps prevent both short- and long-term hearing damage due to harmful decibel levels, and also prevents debris from entering the ear.</p>
+      <ul>
+        <li>Disposable foam earplugs are a good choice for blocking sound and, when welding, for keeping sparks from traveling down the ear canal.</li>
+        <li>Earmuffs are usually the best choice for hearing protection, as they will keep all foreign objects out of the ear.</li>
+        <li>When working in areas with very high noise, both earplugs and earmuffs can be worn to provide better protection.</li>
+        <li>Exercise caution and be aware of your surroundings when wearing hearing protection, since it will be harder to hear people talking, auditory alerts on machines, and alarms.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Hand Protection:</h3>
+      <p>Gloves can prevent injuries in certain situations while increasing the likelihood of injury in others.</p>
+      <ul>
+        <li>Gloves must not be worn when using tools such as bandsaws, lathes, drill press, and grinders.</li>
+      </ul>
+      <p>If a glove gets caught in a tool you can be pulled in and seriously injured or killed.</p>
+      <ul>
+        <li>Leather work gloves are ideal when handling material to protect from splinters and cuts. They often have nylon backs and should not be used for welding or handling hot metal. MIG welding gloves are made of heavy material to resist sparks and heat.</li>
+        <li>Oxy-acetylene fuel gloves are slightly lighter to resist heat while allowing for greater control of the filler wire.</li>
+        <li>TIG gloves are the thinnest and allow finer control of the filler material. They are more sensitive to heat.</li>
+        <li>Rubber gloves may be needed when working with chemicals. Ensure you use non-latex gloves if you or someone you are working with has a latex allergy.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Respiratory Protection:</h3>
+      <p>Airborne contaminants pose a serious risk to health. Particulates less than 10 micrometers, known as PM10, can cause nose and throat irritation.</p>
+      <p>Particulates less than 2.5 micrometers, known as PM2.5, can penetrate deep into the lungs and cross into the bloodstream, causing health problems such as asthma, lung cancer, cardiovascular disease, and premature death.</p>
+      <p>Wood dust can be as small as .01 micrometers and is recognized by the US National Institutes of Health as a known human carcinogen. Respiratory protection helps prevent the inhalation of harmful particulates, chemicals, and gasses.</p>
+      <p>Respiratory protection can range from a disposable N95 face mask to a reusable full face supplied air respirator and should be selected based on the type of material you will be working with. The National Institute for Occupational Safety and Health <q class="parens">(NIOSH)</q> sets standards for respiratory protective equipment and is a good source for information on respiratory protection.</p>
+    </section>
   </section>
   <section id="available-ppe">
     <h2>PPE Available at The Inventors’ Center</h2>
 
-    <h3>To Borrow:</h3>
-    <p>Several types of PPE are available for borrowing when working in the shops. These include:</p>
-    <ul>
-      <li>Safety glasses</li>
-      <li>Earmuffs</li>
-      <li>Welding masks</li>
-      <li>Welding gloves</li>
-      <li>Face shields</li>
-      <li>Leather gloves</li>
-    </ul>
-    <p>These items must be returned to their storage location in the shop when you are done with them.</p>
-
-    <h3>To Keep:</h3>
-    <p>Several consumable safety supplies are available at the safety station near the woodshop.</p>
-    <p class="intro">These include:</p>
-    <ul>
-      <li>Foam earplugs</li>
-      <li>Dust masks</li>
-      <li>Disposable gloves</li>
-    </ul>
-    <p>These items can be kept for your use.</p>
-
-    <h3>PPE You May Need to Provide or Bring:</h3>
-    <p>Certain types of PPE are not provided by The Inventors’ Center and may need to be purchased.</p>
-    <p class="intro">These include:</p>
-    <ul>
-      <li>Chemical resistant gloves</li>
-      <li>Respirators</li>
-      <li>Prescription safety glasses</li>
-      <li>N95 dust masks</li>
-    </ul>
+    <section>
+      <h3>To Borrow:</h3>
+      <p>Several types of PPE are available for borrowing when working in the shops. These include:</p>
+      <ul>
+        <li>Safety glasses</li>
+        <li>Earmuffs</li>
+        <li>Welding masks</li>
+        <li>Welding gloves</li>
+        <li>Face shields</li>
+        <li>Leather gloves</li>
+      </ul>
+      <p>These items must be returned to their storage location in the shop when you are done with them.</p>
+    </section>
+    <section>
+      <h3>To Keep:</h3>
+      <p>Several consumable safety supplies are available at the safety station near the woodshop.</p>
+      <p class="intro">These include:</p>
+      <ul>
+        <li>Foam earplugs</li>
+        <li>Dust masks</li>
+        <li>Disposable gloves</li>
+      </ul>
+      <p>These items can be kept for your use.</p>
+    </section>
+    <section>
+      <h3>PPE You May Need to Provide or Bring:</h3>
+      <p>Certain types of PPE are not provided by The Inventors’ Center and may need to be purchased.</p>
+      <p class="intro">These include:</p>
+      <ul>
+        <li>Chemical resistant gloves</li>
+        <li>Respirators</li>
+        <li>Prescription safety glasses</li>
+        <li>N95 dust masks</li>
+      </ul>
+    </section>
   </section>
   <section id="membership">
     <h2>Membership Agreement</h2>
 
-    <p>Model City Makerspace, DBA: The Inventors’ Center <q class="parens">(<q>Company</q> or <q>IC</q>)</q>, a Tennessee nonprofit corporation, and ____________________ <q class="parens">(name)</q>, the entity or person identified on the signature page of this agreement <q class="parens">(<q>Member</q> or <q>Licensee</q>)</q>, hereby agree that the Company will provide to the Member a license to the shared Inventors’ Center fabrication facilities located at 118 Shelby St. Kingsport, TN. This Agreement is a Membership & License Agreement and is not a lease or any other form of tenancy agreement. The Company and Member agree as follows:</p>
+    <p>
+      Model City Makerspace, DBA: The Inventors’ Center <q class="parens">(<q>Company</q> or <q>IC</q>)</q>, a Tennessee nonprofit corporation, and
+      {#if name}
+        <strong>{name}</strong>
+      {:else}
+      ____________________ <q class="parens">(name)</q>
+      {/if}, the entity or person identified on the signature page of this agreement <q class="parens">(<q>Member</q> or <q>Licensee</q>)</q>, hereby agree that the Company will provide to the Member a license to the shared Inventors’ Center fabrication facilities located at 118 Shelby St. Kingsport, TN. This Agreement is a Membership & License Agreement and is not a lease or any other form of tenancy agreement. The Company and Member agree as follows:
+    </p>
 
     <ol>
       <li>
-        <p>Duration of Agreement & Termination. This Agreement is a Membership and shall commence on _______ <q class="parens">(date)</q>, the date identified on the signature page of this agreement.</p>
+        <p>
+          Duration of Agreement & Termination. This Agreement is a Membership and shall commence on
+          {#if date}
+            <strong>{date.toLocaleDateString(
+              undefined,
+              { year: 'numeric', month: 'long', day: 'numeric' },
+            )}</strong>
+          {:else}
+            __________ <q class="parens">(date)</q>
+          {/if}, the date identified on the signature page of this agreement.
+        </p>
         <p>This Agreement shall automatically renew on a month-to-month basis.</p>
         <p>The Member or IC may terminate this Agreement any time with 30 days advance notice.</p>
         <p>Notwithstanding the foregoing paragraph and notice period, The Inventors’ Center reserves the right to terminate access to and use of Company facilities at any time, immediately and without notice, if the Member fails to comply with any provision of this Agreement and The Inventors’ Center's Policies and Procedures.</p>
@@ -376,23 +427,60 @@
       <li>
         <p class="warn">This agreement is not a lease and does not create or reflect any form of tenancy or interest in real property in favor of the member.</p>
         <p>This Agreement is subject and subordinate to a lease by and between The Inventors’ Center and the owner of the Building. This Agreement shall terminate simultaneously with the termination of the said lease. This Agreement shall be governed by, interpreted and enforced in accordance with the laws of the State of Tennessee.</p>
-        <p>The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement</p>
-        <p>In consideration for my being permitted to participate in the activities of Model City Makerspace, <acronym title="Doing Business As">DBA</acronym> The Inventors’ Center, I agree to follow all rules, guidelines, and expectations stated in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement which preceded this form.</p>
-        <p>I hereby acknowledge that I have <span class="warn">carefully</span> read all of the provisions in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement, fully understand the terms and conditions expressed there, and do freely choose acceptance of those rules, guidelines, and expectations.</p>
-        <p>Additionally, I agree that should I fail to follow these rules, guidelines, and expectations, my membership and door access may be suspended or revoked as The Inventors’ Center and its representatives including but not limited to the Director, Board of Directors, and staff sees fit, in line with the agreement.</p>
-        <p>Finally, I agree to pay membership dues for a minimum of three months from the day I sign up, and from the day I restart my membership should I pause it at any point.</p>
       </li>
     </ol>
+  </section>
+  <section id="sig">
+    <header>
+      <img src="icon.svg"/>
+      <h2>The Inventors’ Center</h2>
+    </header>
 
-    <ul id="sig">
-      <li>Printed Name: ____________________________ Date: _______________</li>
+    <h2>Code of Conduct, Handbook, and Membership Agreement</h2>
+    <p>In consideration for my being permitted to participate in the activities of Model City Makerspace, <acronym title="Doing Business As">DBA</acronym> The Inventors’ Center, I agree to follow all rules, guidelines, and expectations stated in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement which preceded this form.</p>
+    <p>I hereby acknowledge that I have <span class="warn">carefully</span> read all of the provisions in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement, fully understand the terms and conditions expressed there, and do freely choose acceptance of those rules, guidelines, and expectations.</p>
+    <p>Additionally, I agree that should I fail to follow these rules, guidelines, and expectations, my membership and door access may be suspended or revoked as The Inventors’ Center and its representatives including but not limited to the Director, Board of Directors, and staff sees fit, in line with the agreement.</p>
+    <p>Finally, I agree to pay membership dues for a minimum of three months from the day I sign up, and from the day I restart my membership should I pause it at any point.</p>
+
+    <ul>
+      <li>
+        <span>
+          Printed Name:
+          {#if name}
+            <strong>{name}</strong>
+          {:else}
+            ____________________________
+          {/if}
+        </span>
+        <span>
+          Date:
+          {#if date}
+            <strong>{date.toLocaleDateString(
+              undefined,
+              { year: 'numeric', month: 'long', day: 'numeric' },
+            )}</strong>
+          {:else}
+            _______________
+          {/if}
+        </span>
+      </li>
       <li>Signature: _________________________________________</li>
-      <li>Phone: ____________________</li>
+      <li>
+        Phone:
+        {#if phone}
+          <strong>{phone}</strong>
+        {:else}
+          ____________________
+        {/if}
+      </li>
     </ul>
   </section>
 </main>
 
 <style>
+  :root {
+    --colors: light-dark(#634B96, #F08C3D);
+  }
   header {
     display: flex;
     flex-direction: column;
@@ -400,6 +488,7 @@
     margin-block: 15vh;
 
     & h1 {
+      font-family: Allegrand;
       font-size: clamp(21pt, 10vw, 35pt);
     }
     & h1, & h2 {
@@ -423,7 +512,7 @@
       margin-block: 1rem 0.5rem;
     }
     :where(h2, h3) {
-      color: light-dark(#634B96, #F08C3D);
+      color: var(--colors);
     }
   }
   header img {
@@ -453,6 +542,13 @@
     orphans: 3;
     widows: 3;
   }
+  ul li::marker {
+    content: '► ';
+    color: var(--colors);
+  }
+  li > p:first-child {
+    margin-block-start: 0;
+  }
   p {
     text-indent: 1.5em;
 
@@ -466,6 +562,29 @@
       & + ul {
         margin-block-start: 0;
       }
+    }
+  }
+  #sig header {
+    margin-block-end: 1rem;
+    & img {
+      max-height: 7rem;
+    }
+    & h2 {
+      font-family: Allegrand;
+      font-size: 150%;
+    }
+  }
+  #sig h2 {
+    font-size: 110%;
+  }
+  #sig ul {
+    margin: 0;
+    padding: 0;
+    & li {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
     }
   }
   @media print {
