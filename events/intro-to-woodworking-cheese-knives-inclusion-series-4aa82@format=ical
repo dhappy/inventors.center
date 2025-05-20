@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:67b5326a5fbeec619dd6f31a@squarespace.com
+DTSTAMP:20250222T014708Z
+DTSTART:20250322T140000Z
+DTEND:20250322T180000Z
+SUMMARY:Intro to Woodworking: Cheese Knives (Inclusion Series)
+GEO:36.546471;-82.5629
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR

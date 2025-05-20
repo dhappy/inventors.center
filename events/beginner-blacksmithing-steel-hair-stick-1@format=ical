@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:649a1f8b9b9aec1f9b8d5ee7@squarespace.com
+DTSTAMP:20230626T233722Z
+DTSTART:20230805T133000Z
+DTEND:20230805T160000Z
+SUMMARY:Beginner Blacksmithing: Steel Hair Stick
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:658219b47aeb540fad63acf6@squarespace.com
+DTSTAMP:20231219T223502Z
+DTSTART:20240310T170000Z
+DTEND:20240310T210000Z
+SUMMARY:Intro to Blacksmithing: Forged Bracelets (Inclusion Series)
+GEO:36.546471;-82.5629
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR

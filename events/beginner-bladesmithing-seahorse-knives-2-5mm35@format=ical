@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:653c2a98472c6f26c043f1de@squarespace.com
+DTSTAMP:20231027T213213Z
+DTSTART:20231202T190000Z
+DTEND:20231202T213000Z
+SUMMARY:Beginner Bladesmithing: Steel Hairsticks
+GEO:36.546471;-82.5629
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR

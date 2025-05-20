@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:643475b23cc4614b8417a960@squarespace.com
+DTSTAMP:20230410T205058Z
+DTSTART:20230612T220000Z
+DTEND:20230612T233000Z
+SUMMARY:Design Your Business Cards (Promote Yourself: Supper Seminars)
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:6434737c5324fe0bbc8656c7@squarespace.com
+DTSTAMP:20230410T204146Z
+DTSTART:20230522T220000Z
+DTEND:20230522T230000Z
+SUMMARY:Marketing (Promote Yourself: Supper Seminars)
+GEO:36.546471;-82.5629
+LOCATION:Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, Uni
+ ted States
+END:VEVENT
+END:VCALENDAR

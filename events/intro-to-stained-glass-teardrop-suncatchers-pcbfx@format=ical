@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Squarespace Inc/Squarespace 6//v6//EN
+BEGIN:VEVENT
+UID:66b1665d07873c43bc22b5bb@squarespace.com
+DTSTAMP:20240813T193434Z
+DTSTART:20240922T140000Z
+DTEND:20240922T180000Z
+SUMMARY:Intro to Stained Glass: Teardrop Suncatchers
+GEO:40.720756;-74.000761
+LOCATION:The Inventor Center\, 118 Shelby Street\, Kingsport\, TN\, 37660\, 
+ United States
+END:VEVENT
+END:VCALENDAR
