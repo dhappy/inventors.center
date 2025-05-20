@@ -29,8 +29,9 @@
     font-family: Allegrand;
   }
   h1 {
-    font-size: clamp(18pt, 24vw, 75pt);
-    -webkit-stroke: 2px solid #333;
+    font-size: clamp(18pt, 24vw, 62pt);
+    text-stroke: 2px #333;
+    -webkit-text-stroke: 2px #CCC8;
     margin-block: 0;
 
     & span {

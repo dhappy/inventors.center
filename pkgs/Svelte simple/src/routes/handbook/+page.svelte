@@ -41,7 +41,7 @@
 
     <p>The Inventors’ Center reserves the right to summarily eject you if you recklessly endanger others, act in violation of the code outlined  above, or otherwise behave poorly.</p>
 
-    <p>If someone is abusive or causes you to feel uncomfortable, speak to a member of staff or email us at <a href="mailto:IC%20Abuse%20Reporting%20%3Cabuse@inventors.center%3E">abuse@inventors.center</a>.</p>
+    <p>If someone is abusive or causes you to feel uncomfortable, speak to a member of staff or email us at <a href="mailto:%22IC%3A%20Abuse%20Reporting%22%20%3Cabuse@inventors.center%3E">abuse@inventors.center</a>.</p>
 
     <p>This code of conduct is neither exhaustive nor complete. It serves to distill our common understanding of a safe, collaborative space.</p>
 
@@ -76,9 +76,9 @@
       <li>Late fees, in the amount of 5% of the monthly fees due, may be charged 10 days after the billing date and monthly thereafter until the outstanding balance is paid in full.</li>
       <li>All monthly and annual membership are recurring by default.</li>
       <li>By signing up as a member you are committing to a 3 month minimum membership term.</li>
-      <li>30 days notice is required to terminate memberships. Cancellations must be submitted via Podia, or by emailing TheInventorCenter@gmail.com. Verbal or handwritten cancellations are not accepted.</li>
+      <li>30 days notice is required to terminate memberships. Cancellations must be submitted via Podia, or by emailing <a href="mailto:%22IC%3A%20Membership%22%20%3Cmembers@inventors.center%3E">members@inventors.center</a>. Verbal or handwritten cancellations are not accepted.</li>
       <li>All membership payments are final. No refunds are available.</li>
-      <li>If a membership billing error has occurred, please notify Member Services within 60 days of the said error by emailing TheInventorCenter@gmail.com. The Inventorsu2019ter will not refund membership billing errors older than 60 days.</li>
+      <li>If a membership billing error has occurred, please notify Member Services within 60 days of the said error by emailing <a href="mailto:%22IC%3A%20Membership%22%20%3Cmembers@inventors.center%3E">members@inventors.center</a>. The Inventors’ Center will not refund membership billing errors older than 60 days.</li>
     </ul>
   </section>
   <section id="privacy">
@@ -424,5 +424,6 @@
   }
   section {
     margin-block: 6rem;
+    break-after: page;
   }
 </style>
