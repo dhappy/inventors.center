@@ -32,6 +32,8 @@
       }
     })
   })
+
+  $inspect(param)
 </script>
 
 <svelte:head>
@@ -50,8 +52,8 @@
       <li><a href="#code">Code of Conduct</a></li>
       <li><a href="#policies">Policies and Procedures</a></li>
       <li><a href="#payment">Payment and Billing Terms</a></li>
-      <li><a href="#privacy">Privacy Policy for Members</a></li>
-      <li><a href="#data">Data</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#data">Data Usage</a></li>
       <li><a href="#net">Acceptable Use of Our Network and General Considerations</a></li>
       <li><a href="#wifi">Wireless Network</a></li>
       <li><a href="#trash">Trash and Materials</a></li>
@@ -118,7 +120,7 @@
     </ul>
   </section>
   <section id="privacy">
-    <h2>Privacy Policy for Members</h2>
+    <h2>Privacy Policy</h2>
 
     <p>In order to foster a safe and supportive member atmosphere, we ask all members to abide by these privacy policies. Please also see our Privacy Policy for how the IC itself protects members’ personal data.</p>
 
@@ -142,7 +144,7 @@
     </section>
   </section>
   <section id="data">
-    <h2>Data</h2>
+    <h2>Data Usage</h2>
 
     <p>Members may transmit data on our wireless network or leave it stored on various computers such as classroom machines or CNC machinery. We expect that members do not deliberately eavesdrop on each others' communications. We similarly expect that members will not go to unusual lengths <q class="parens">(such as forensic examination of unused disk areas on shared machines)</q> to recover files deleted by other members. If a member leaves an undeleted file on a shared computer, you may look at it to figure out what it is or who to contact about it, especially if you think it might need to be saved or if it might need to be deleted to free up space, but you do not have rights to copy it for your own use; please ask first.</p>
 
@@ -186,9 +188,9 @@
 
       <ul>
         <li>No unattended BitTorrent. <q class="parens">(If you'd like to torrent down a Debian release and then turn it off, that's okay, but don't leave it serving after you're done.)</q></li>
-        <li>Nothing that could cause the RIAA or MPAA to serve us papers. <q class="parens">(No violation of copyrights: don't torrent a movie.)</q></li>
+        <li>Nothing that could cause the <acronym title="Recording Industry Asociation of America">RIAA</acronym> or <acronym title="Motion Picture Asociation of America">MPAA</acronym> to serve us papers. <q class="parens">(No violation of copyrights: don't torrent a movie.)</q></li>
         <li>
-          <p>Nothing that could cause us to have to handle a DMCA takedown order. <q class="parens">(Again, no violation of copyright: don't set up a warez site.)</q></p>
+          <p>Nothing that could cause us to have to handle a <acronym title="Digital Millenium Copyright Act">DMCA</acronym> takedown order. <q class="parens">(Again, no violation of copyright: don't set up a warez site.)</q></p>
           <p>As a rule of thumb, expect that our total available bandwidth is equivalent to a medium-quality cable-modem connection <q class="parens">(because it is a cable-modem connection)</q>. But unlike your connection at home, this one is shared by dozens of people and devices.</p>
         </li>
       </ul>
@@ -220,7 +222,7 @@
       <p>If you have a large object or objects to dispose of, please bring them directly to the city dumpster.</p>
     </section>
     <section>
-      <h3>Perishables <q class="parens">(food)</q>:</h3>
+      <h3>Perishables <q class="parens">(Food)</q>:</h3>
 
       <p>All food and drink should go in the trash can in the main room which has a lid! Please pour out drinks in the sink before disposing of the cup.</p>
     </section>
@@ -259,7 +261,7 @@
     <h3>Moving Other Peoples’ Work:</h3>
 
     <ul>
-      <li>All unattended projects should have a note detailing when you will return to move it, how someone else might move it safely, and special considerations i.e. "the paint will be dry by 4 pm Friday."</li>
+      <li>All unattended projects should have a note detailing when you will return to move it, how someone else might move it safely, and special considerations i.e. <q>the paint will be dry by 4 pm Friday.</q>.</li>
       <li>If you come across a project that is in an aisle or other shared space, look around to see whose it is. If no one is around, a note should be present. If no one around knows anything about the project and you need the resource, please be respectful if you need to move it.</li>
       <li>Respecting other people's projects is the right thing to do. Treat them better than you would want your own project treated.</li>
       <li>If you can put the project in a box or container to keep things together, that is best. If you know whose project it is, try to contact them. If not, you could send an email to <a href="mailto:lost@inventors.center">lost@inventors.center</a>.</li>
@@ -394,7 +396,7 @@
     <ol>
       <li>
         <p>
-          Duration of Agreement & Termination. This Agreement is a Membership and shall commence on
+          <strong>Duration of Agreement & Termination.</strong> This Agreement is a Membership and shall commence on
           {#if param.date}
             <strong>{param.date.toLocaleDateString(
               undefined,
@@ -411,31 +413,31 @@
         <p>Upon the termination of this Agreement, Member shall thereafter have no further right to use IC facilities in any manner and Member shall make no further use of IC other than to remove personal items. All advance fees, if any, shall be justly prorated and returned to Member, along with any deposits, within 30 days of the termination of this agreement. Personal items must be removed from The Inventors’ Center within 15 days of the termination of this agreement, after which period they become the property of The Inventors’ Center.</p>
       </li>
       <li>
-        <p>Description of Services. IC agrees to provide Member with secured-entry access to nonexclusive, clean, well-maintained manufacturing equipment and workshop facilities, reasonable electrical power, and wireless internet at The Inventors’ Center, and range of related services as detailed in the attached Payment and Billing Terms. Said attachments and the Member's first invoice details the corresponding service rates.</p>
+        <p><strong>Description of Services.</strong> IC agrees to provide Member with secured-entry access to nonexclusive, clean, well-maintained manufacturing equipment and workshop facilities, reasonable electrical power, and wireless internet at The Inventors’ Center, and range of related services as detailed in the attached Payment and Billing Terms. Said attachments and the Member's first invoice details the corresponding service rates.</p>
       </li>
       <li>
-        <p>Member Obligations. A member shall only use the facilities in accordance with IC Policies and Procedures. The shared facilities shall be kept in a neat, clean and attractive condition at all times. A member shall not disturb the use and enjoyment of the Services by any other Member of the Company or the use and enjoyment of the building in which IC is located <q class="parens">(<q>Building</q>)</q> by any occupant of the Building. A member shall not use IC facilities for any inappropriate or unlawful activity including obscenity and use of material protected by intellectual property laws.</p>
+        <p><strong>Member Obligations.</strong> A member shall only use the facilities in accordance with IC Policies and Procedures. The shared facilities shall be kept in a neat, clean and attractive condition at all times. A member shall not disturb the use and enjoyment of the Services by any other Member of the Company or the use and enjoyment of the building in which IC is located <q class="parens">(<q>Building</q>)</q> by any occupant of the Building. A member shall not use IC facilities for any inappropriate or unlawful activity including obscenity and use of material protected by intellectual property laws.</p>
         <p>Member will not cause any damage to any part of The Inventors’ Center, including unreasonable or inappropriate wear on equipment or damage to the Building. Should the member cause unreasonable or inappropriate wear on equipment or damage to the Building, they will be held responsible for the cost of returning the equipment or Building to a working state deemed appropriate by Inventors’ Center Staff.</p>
       </li>
       <li>
-        <p>Fees. User agrees to make payments in the amount, form and manner as detailed in the IC Payment and Billing Terms. Failure to make monthly  payments as described will result in the termination of this Agreement and revocation of Member's license to use the facilities. In addition, Member shall pay all reasonable third-party fees <q class="parens">(attorney's fees and debt collection fees specifically included)</q> and other costs incurred by the Company in connection with any late payments or past due amounts.</p>
+        <p><strong>Fees.</strong> User agrees to make payments in the amount, form and manner as detailed in the IC Payment and Billing Terms. Failure to make monthly  payments as described will result in the termination of this Agreement and revocation of Member's license to use the facilities. In addition, Member shall pay all reasonable third-party fees <q class="parens">(attorney's fees and debt collection fees specifically included)</q> and other costs incurred by the Company in connection with any late payments or past due amounts.</p>
       </li>
       <li>
-        <p>Risk of Use. Member acknowledges that they are using the facilities of their own free will and decision. Member acknowledges that The Inventors’ Center does not have any liability with respect to Member's access, participation in, use of the facilities, or any loss resulting from such participation or use.</p>
+        <p><strong>Risk of Use.</strong> Member acknowledges that they are using the facilities of their own free will and decision. Member acknowledges that The Inventors’ Center does not have any liability with respect to Member's access, participation in, use of the facilities, or any loss resulting from such participation or use.</p>
         <p>The Inventors’ Center and its respective board members, employees, volunteers, instructors, agents, contractors, and officers shall not, to the extent permitted by law, be liable for, and the Member waives all right of recovery against The Inventors’ Center and Model City Makerspace and such individuals for any damage or claim with respect to any injury to person or damage to, or loss or destruction of any property of Member, its contractors, employees and invitees due to any act, omission or occurrence in or about IC or the Building.</p>
         <p>Except for gross or willful misconduct by the Company, Member agrees to indemnify, defend, protect and hold the Company and its respective board members, employees, volunteers, instructors, agents, contractors and officers harmless from and against all claims of whatever nature arising out of Member's use of the facilities and occupancy of the Company. Members are strongly encouraged to carry insurance that covers their personal equipment while using the workspace at The Inventors’ Center.</p>
       </li>
       <li>
-        <p>Interruption of Service. Member acknowledges that due to the imperfect nature of electronic communications, electronics, and utilities, The Inventors’ Center shall not be responsible for damages, direct or consequential, which may result in the failure of IC to furnish any of the Services. The Company will, however, act in good faith and in a  commercially reasonable manner in working to remedy any flaws in the facilities or equipment or delays in providing access to the facilities or equipment to the Member.</p>
+        <p><strong>Interruption of Service.</strong> Member acknowledges that due to the imperfect nature of electronic communications, electronics, and utilities, The Inventors’ Center shall not be responsible for damages, direct or consequential, which may result in the failure of IC to furnish any of the Services. The Company will, however, act in good faith and in a  commercially reasonable manner in working to remedy any flaws in the facilities or equipment or delays in providing access to the facilities or equipment to the Member.</p>
       </li>
       <li>
-        <p>Relationship of the Parties. Member is not an employee or contractor of the Company. The Inventors’ Center has no right to the work produced by Members or guests working at the Company. Members shall maintain all copyrights, patents and any other proprietary rights related to the Member's works that are created using the facilities.</p>
+        <p><strong>Relationship of the Parties.</strong> Member is not an employee or contractor of the Company. The Inventors’ Center has no right to the work produced by Members or guests working at the Company. Members shall maintain all copyrights, patents and any other proprietary rights related to the Member's works that are created using the facilities.</p>
       </li>
       <li>
-        <p>Partial Invalidity. If any one or more of the provisions of this Agreement shall be invalid or unenforceable, the remainder of this Agreement shall not be affected, and each remaining provision shall be valid and enforceable to the fullest extent permitted by law.</p>
+        <p><strong>Partial Invalidity.</strong> If any one or more of the provisions of this Agreement shall be invalid or unenforceable, the remainder of this Agreement shall not be affected, and each remaining provision shall be valid and enforceable to the fullest extent permitted by law.</p>
       </li>
       <li>
-        <p>Waiver. No delay or omission on the part of The Inventors’ Center in exercising any right under this Agreement shall operate as a waiver of such right or of any other right of the Company, nor shall any waiver of such right or rights on any one occasion be deemed a bar to, or waiver of, the same right or rights on any future occasion. The acceptance by The Inventors’ Center of any payment, or of a sum less than is due, shall not be construed as a waiver of any of the Company's rights unless such waiver is in writing.</p>
+        <p><strong>Waiver.</strong> No delay or omission on the part of The Inventors’ Center in exercising any right under this Agreement shall operate as a waiver of such right or of any other right of the Company, nor shall any waiver of such right or rights on any one occasion be deemed a bar to, or waiver of, the same right or rights on any future occasion. The acceptance by The Inventors’ Center of any payment, or of a sum less than is due, shall not be construed as a waiver of any of the Company's rights unless such waiver is in writing.</p>
       </li>
       <li>
         <p class="warn">This agreement is not a lease and does not create or reflect any form of tenancy or interest in real property in favor of the member.</p>
@@ -450,43 +452,41 @@
     </header>
 
     <h2>Code of Conduct, Handbook, and Membership Agreement</h2>
-    <p>In consideration for my being permitted to participate in the activities of Model City Makerspace, <acronym title="Doing Business As">DBA</acronym> The Inventors’ Center, I agree to follow all rules, guidelines, and expectations stated in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement which preceded this form.</p>
+    <p>In consideration for my being permitted to participate in the activities of Model City Makerspace, <acronym title="Doing Business As">DBA</acronym> <q>The Inventors’ Center</q>, I agree to follow all rules, guidelines, and expectations stated in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement which preceded this form.</p>
     <p>I hereby acknowledge that I have <span class="warn">carefully</span> read all of the provisions in The Inventors’ Center Code of Conduct, Handbook, and Membership Agreement, fully understand the terms and conditions expressed there, and do freely choose acceptance of those rules, guidelines, and expectations.</p>
     <p>Additionally, I agree that should I fail to follow these rules, guidelines, and expectations, my membership and door access may be suspended or revoked as The Inventors’ Center and its representatives including but not limited to the Director, Board of Directors, and staff sees fit, in line with the agreement.</p>
     <p>Finally, I agree to pay membership dues for a minimum of three months from the day I sign up, and from the day I restart my membership should I pause it at any point.</p>
 
-    <ul>
+    <form action="#"><ul>
       <li>
         <span>
           Printed Name:
-          {#if param.name}
-            <strong>{param.name}</strong>
-          {:else}
-            ____________________________
-          {/if}
+          <input
+            name="name"
+            value={param.name ?? ''}
+          />
         </span>
         <span>
           Date:
-          {#if param.date}
-            <strong>{param.date.toLocaleDateString(
-              undefined,
-              { year: 'numeric', month: 'long', day: 'numeric' },
-            )}</strong>
-          {:else}
-            _______________
-          {/if}
+          <input
+            type="date" name="date"
+            value={param.date ? (
+              param.date.toISOString().split('T').shift()
+            ) : ('')}
+          />
         </span>
       </li>
       <li>Signature: _________________________________________</li>
       <li>
         Phone:
-        {#if param.phone}
-          <strong>{param.phone}</strong>
-        {:else}
-          ____________________
-        {/if}
+        <input
+          name="phone" inputmode="numeric"
+          value={param.phone ?? ''}
+        />
       </li>
     </ul>
+      <button class="hidden">Update</button>
+    </form>
   </section>
 </main>
 
@@ -584,7 +584,7 @@
     }
     & h2 {
       font-family: Allegrand;
-      font-size: 150%;
+      font-size: 200%;
     }
   }
   #sig h2 {
@@ -598,7 +598,25 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 3rem;
+
+      & input:not([type='date']), & span:first-of-type {
+        flex-grow: 1;
+      }
     }
+  }
+  input {
+    border-style: none none solid none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+
+    &[type='date'] {
+      max-width: 30ch;
+    }
+  }
+  .hidden {
+    display: none;
   }
   @media print {
     main {
