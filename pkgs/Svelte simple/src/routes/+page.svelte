@@ -12,9 +12,7 @@
 </header>
 
 <main>
-  <p>Enjoy the fun of the Tri-Cities premiere makerspace — The Inventors' Center — virtually, by joining <a href="https://chat.inventors.center">our Discord <img src="Discord.svg" class="icon" alt="💬"/></a>.</p>
-
-
+  <p>Enjoy the fun of the Tri-Cities’ <q class="parens">(of north-east Tennessee)</q> premiere makerspace — The Inventors' Center — virtually, by joining <a href="https://chat.inventors.center">our Discord <img src="Discord.svg" class="icon" alt="💬"/></a>.</p>
 
   <aside>This site is a misnomer. The actual name of the organization, for reasons I've not been able to discern, is <q><a href="https://theinventorcenter.org">The Inventor Center</a></q>. I think the possessive plural fosters more of a sense of community, but it was said & done long before I arrived.</aside>
 </main>
@@ -25,8 +23,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     font-family: Allegrand;
+    margin-top: 5vh;
   }
   h1 {
     font-size: clamp(18pt, 24vw, 62pt);
@@ -55,6 +54,7 @@
     font-size: 21pt;
     margin-inline: auto;
     text-align: center;
+    margin-top: 15vh;
   }
   .icon {
     max-height: 1em;

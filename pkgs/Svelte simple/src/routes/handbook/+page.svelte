@@ -532,12 +532,6 @@
     max-height: 50vh;
     margin-inline: auto;
   }
-  q.parens {
-    font-style: italic;
-    &::before, &::after {
-      content: '';
-    }
-  }
   .warn {
     font-weight: bold;
     font-variant: small-caps;
@@ -557,6 +551,8 @@
   }
   ul li::marker {
     content: '► ';
+  }
+  li::marker {
     color: var(--colors);
   }
   li > p:first-child {
