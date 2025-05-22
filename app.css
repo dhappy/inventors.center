@@ -14,3 +14,10 @@ a {
 a:hover {
   filter: hue-rotate(90deg);
 }
+
+q.parens {
+  font-style: italic;
+  &::before, &::after {
+    content: '';
+  }
+}
