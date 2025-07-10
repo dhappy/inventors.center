@@ -12,7 +12,9 @@
 </header>
 
 <main>
-  <p>Enjoy the fun of the Tri-Cities’ <q class="parens">(of north-east Tennessee)</q> premiere makerspace — The Inventors' Center — virtually, by joining <a href="https://chat.inventors.center">our Discord <img src="Discord.svg" class="icon" alt="💬"/></a>.</p>
+  <p>Discover the fun of the Tri-Cities’ <q class="parens">(of north-east Tennessee)</q> premiere makerspace — The Inventors' Center — virtually, by joining <a href="https://chat.inventors.center">our Discord <img src="Discord.svg" class="icon" alt="💬"/></a>.</p>
+
+  <p>If you're interested in joining for the very affordable price of $35 / month, read through <a href="handbook/">the handbook</a> for all the details.</p>
 
   <aside>This site is a misnomer. The actual name of the organization, for reasons I've not been able to discern, is <q><a href="https://theinventorcenter.org">The Inventor Center</a></q>. I think the possessive plural fosters more of a sense of community, but it was said & done long before I arrived.</aside>
 </main>
