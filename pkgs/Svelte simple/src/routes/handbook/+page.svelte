@@ -41,7 +41,7 @@
 </svelte:head>
 
 <header>
-  <img src="icon.svg"/>
+  <a href="/"><img src="icon.svg" alt="🧠"/></a>
   <h1>The Inventors' Center Handbook</h1>
   <h2><q class="parens">(Revised February 2023)</q></h2>
 </header>
@@ -382,68 +382,58 @@
     </section>
   </section>
   <section id="membership">
-    <h2>Membership Agreement</h2>
+    <form action="handbook" method="get">
+      <h2>Membership Agreement</h2>
 
-    <p>
-      Model City Makerspace, DBA: The Inventors’ Center <q class="parens">(<q>Company</q> or <q>IC</q>)</q>, a Tennessee nonprofit corporation, and
-      {#if name}
-        <strong>{name}</strong>
-      {:else}
-      ____________________ <q class="parens">(name)</q>
-      {/if}, the entity or person identified on the signature page of this agreement <q class="parens">(<q>Member</q> or <q>Licensee</q>)</q>, hereby agree that the Company will provide to the Member a license to the shared Inventors’ Center fabrication facilities located at 118 Shelby St. Kingsport, TN. This Agreement is a Membership & License Agreement and is not a lease or any other form of tenancy agreement. The Company and Member agree as follows:
-    </p>
+      <p>
+        Model City Makerspace, DBA: The Inventors’ Center <q class="parens">(<q>Company</q> or <q>IC</q>)</q>, a Tennessee nonprofit corporation, and <input name="name" value={param.name}/> <q class="parens">(name)</q>, the entity or person identified on the signature page of this agreement <q class="parens">(<q>Member</q> or <q>Licensee</q>)</q>, hereby agree that the Company will provide to the Member a license to the shared Inventors’ Center fabrication facilities located at 118 Shelby St. Kingsport, TN. This Agreement is a Membership & License Agreement and is not a lease or any other form of tenancy agreement. The Company and Member agree as follows:
+      </p>
 
-    <ol>
-      <li>
-        <p>
-          <strong>Duration of Agreement & Termination.</strong> This Agreement is a Membership and shall commence on
-          {#if param.date}
-            <strong>{param.date.toLocaleDateString(
-              undefined,
-              { year: 'numeric', month: 'long', day: 'numeric' },
-            )}</strong>
-          {:else}
-            __________ <q class="parens">(date)</q>
-          {/if}, the date identified on the signature page of this agreement.
-        </p>
-        <p>This Agreement shall automatically renew on a month-to-month basis.</p>
-        <p>The Member or IC may terminate this Agreement any time with 30 days advance notice.</p>
-        <p>Notwithstanding the foregoing paragraph and notice period, The Inventors’ Center reserves the right to terminate access to and use of Company facilities at any time, immediately and without notice, if the Member fails to comply with any provision of this Agreement and The Inventors’ Center's Policies and Procedures.</p>
-        <p>The Inventors’ Center reserves the right to amend the Policies and Procedures and Payment and Billing Terms from time-to-time and at its sole discretion. The Inventors’ Center will notify Member of any changes to said rules and regulations in writing and prior to such rule changes taking effect.</p>
-        <p>Upon the termination of this Agreement, Member shall thereafter have no further right to use IC facilities in any manner and Member shall make no further use of IC other than to remove personal items. All advance fees, if any, shall be justly prorated and returned to Member, along with any deposits, within 30 days of the termination of this agreement. Personal items must be removed from The Inventors’ Center within 15 days of the termination of this agreement, after which period they become the property of The Inventors’ Center.</p>
-      </li>
-      <li>
-        <p><strong>Description of Services.</strong> IC agrees to provide Member with secured-entry access to nonexclusive, clean, well-maintained manufacturing equipment and workshop facilities, reasonable electrical power, and wireless internet at The Inventors’ Center, and range of related services as detailed in the attached Payment and Billing Terms. Said attachments and the Member's first invoice details the corresponding service rates.</p>
-      </li>
-      <li>
-        <p><strong>Member Obligations.</strong> A member shall only use the facilities in accordance with IC Policies and Procedures. The shared facilities shall be kept in a neat, clean and attractive condition at all times. A member shall not disturb the use and enjoyment of the Services by any other Member of the Company or the use and enjoyment of the building in which IC is located <q class="parens">(<q>Building</q>)</q> by any occupant of the Building. A member shall not use IC facilities for any inappropriate or unlawful activity including obscenity and use of material protected by intellectual property laws.</p>
-        <p>Member will not cause any damage to any part of The Inventors’ Center, including unreasonable or inappropriate wear on equipment or damage to the Building. Should the member cause unreasonable or inappropriate wear on equipment or damage to the Building, they will be held responsible for the cost of returning the equipment or Building to a working state deemed appropriate by Inventors’ Center Staff.</p>
-      </li>
-      <li>
-        <p><strong>Fees.</strong> User agrees to make payments in the amount, form and manner as detailed in the IC Payment and Billing Terms. Failure to make monthly  payments as described will result in the termination of this Agreement and revocation of Member's license to use the facilities. In addition, Member shall pay all reasonable third-party fees <q class="parens">(attorney's fees and debt collection fees specifically included)</q> and other costs incurred by the Company in connection with any late payments or past due amounts.</p>
-      </li>
-      <li>
-        <p><strong>Risk of Use.</strong> Member acknowledges that they are using the facilities of their own free will and decision. Member acknowledges that The Inventors’ Center does not have any liability with respect to Member's access, participation in, use of the facilities, or any loss resulting from such participation or use.</p>
-        <p>The Inventors’ Center and its respective board members, employees, volunteers, instructors, agents, contractors, and officers shall not, to the extent permitted by law, be liable for, and the Member waives all right of recovery against The Inventors’ Center and Model City Makerspace and such individuals for any damage or claim with respect to any injury to person or damage to, or loss or destruction of any property of Member, its contractors, employees and invitees due to any act, omission or occurrence in or about IC or the Building.</p>
-        <p>Except for gross or willful misconduct by the Company, Member agrees to indemnify, defend, protect and hold the Company and its respective board members, employees, volunteers, instructors, agents, contractors and officers harmless from and against all claims of whatever nature arising out of Member's use of the facilities and occupancy of the Company. Members are strongly encouraged to carry insurance that covers their personal equipment while using the workspace at The Inventors’ Center.</p>
-      </li>
-      <li>
-        <p><strong>Interruption of Service.</strong> Member acknowledges that due to the imperfect nature of electronic communications, electronics, and utilities, The Inventors’ Center shall not be responsible for damages, direct or consequential, which may result in the failure of IC to furnish any of the Services. The Company will, however, act in good faith and in a  commercially reasonable manner in working to remedy any flaws in the facilities or equipment or delays in providing access to the facilities or equipment to the Member.</p>
-      </li>
-      <li>
-        <p><strong>Relationship of the Parties.</strong> Member is not an employee or contractor of the Company. The Inventors’ Center has no right to the work produced by Members or guests working at the Company. Members shall maintain all copyrights, patents and any other proprietary rights related to the Member's works that are created using the facilities.</p>
-      </li>
-      <li>
-        <p><strong>Partial Invalidity.</strong> If any one or more of the provisions of this Agreement shall be invalid or unenforceable, the remainder of this Agreement shall not be affected, and each remaining provision shall be valid and enforceable to the fullest extent permitted by law.</p>
-      </li>
-      <li>
-        <p><strong>Waiver.</strong> No delay or omission on the part of The Inventors’ Center in exercising any right under this Agreement shall operate as a waiver of such right or of any other right of the Company, nor shall any waiver of such right or rights on any one occasion be deemed a bar to, or waiver of, the same right or rights on any future occasion. The acceptance by The Inventors’ Center of any payment, or of a sum less than is due, shall not be construed as a waiver of any of the Company's rights unless such waiver is in writing.</p>
-      </li>
-      <li>
-        <p class="warn">This agreement is not a lease and does not create or reflect any form of tenancy or interest in real property in favor of the member.</p>
-        <p>This Agreement is subject and subordinate to a lease by and between The Inventors’ Center and the owner of the Building. This Agreement shall terminate simultaneously with the termination of the said lease. This Agreement shall be governed by, interpreted and enforced in accordance with the laws of the State of Tennessee.</p>
-      </li>
-    </ol>
+      <ol>
+        <li>
+          <p>
+            <strong>Duration of Agreement & Termination.</strong> This Agreement is a Membership and shall commence on
+            <input type="date" name="date" value={(param.date ?? new Date()).toISOString().split('T').shift()}/> <q class="parens">(date)</q>, the date identified on the signature page of this agreement.
+          </p>
+          <p>This Agreement shall automatically renew on a month-to-month basis.</p>
+          <p>The Member or IC may terminate this Agreement any time with 30 days advance notice.</p>
+          <p>Notwithstanding the foregoing paragraph and notice period, The Inventors’ Center reserves the right to terminate access to and use of Company facilities at any time, immediately and without notice, if the Member fails to comply with any provision of this Agreement and The Inventors’ Center's Policies and Procedures.</p>
+          <p>The Inventors’ Center reserves the right to amend the Policies and Procedures and Payment and Billing Terms from time-to-time and at its sole discretion. The Inventors’ Center will notify Member of any changes to said rules and regulations in writing and prior to such rule changes taking effect.</p>
+          <p>Upon the termination of this Agreement, Member shall thereafter have no further right to use IC facilities in any manner and Member shall make no further use of IC other than to remove personal items. All advance fees, if any, shall be justly prorated and returned to Member, along with any deposits, within 30 days of the termination of this agreement. Personal items must be removed from The Inventors’ Center within 15 days of the termination of this agreement, after which period they become the property of The Inventors’ Center.</p>
+        </li>
+        <li>
+          <p><strong>Description of Services.</strong> IC agrees to provide Member with secured-entry access to nonexclusive, clean, well-maintained manufacturing equipment and workshop facilities, reasonable electrical power, and wireless internet at The Inventors’ Center, and range of related services as detailed in the attached Payment and Billing Terms. Said attachments and the Member's first invoice details the corresponding service rates.</p>
+        </li>
+        <li>
+          <p><strong>Member Obligations.</strong> A member shall only use the facilities in accordance with IC Policies and Procedures. The shared facilities shall be kept in a neat, clean and attractive condition at all times. A member shall not disturb the use and enjoyment of the Services by any other Member of the Company or the use and enjoyment of the building in which IC is located <q class="parens">(<q>Building</q>)</q> by any occupant of the Building. A member shall not use IC facilities for any inappropriate or unlawful activity including obscenity and use of material protected by intellectual property laws.</p>
+          <p>Member will not cause any damage to any part of The Inventors’ Center, including unreasonable or inappropriate wear on equipment or damage to the Building. Should the member cause unreasonable or inappropriate wear on equipment or damage to the Building, they will be held responsible for the cost of returning the equipment or Building to a working state deemed appropriate by Inventors’ Center Staff.</p>
+        </li>
+        <li>
+          <p><strong>Fees.</strong> User agrees to make payments in the amount, form and manner as detailed in the IC Payment and Billing Terms. Failure to make monthly  payments as described will result in the termination of this Agreement and revocation of Member's license to use the facilities. In addition, Member shall pay all reasonable third-party fees <q class="parens">(attorney's fees and debt collection fees specifically included)</q> and other costs incurred by the Company in connection with any late payments or past due amounts.</p>
+        </li>
+        <li>
+          <p><strong>Risk of Use.</strong> Member acknowledges that they are using the facilities of their own free will and decision. Member acknowledges that The Inventors’ Center does not have any liability with respect to Member's access, participation in, use of the facilities, or any loss resulting from such participation or use.</p>
+          <p>The Inventors’ Center and its respective board members, employees, volunteers, instructors, agents, contractors, and officers shall not, to the extent permitted by law, be liable for, and the Member waives all right of recovery against The Inventors’ Center and Model City Makerspace and such individuals for any damage or claim with respect to any injury to person or damage to, or loss or destruction of any property of Member, its contractors, employees and invitees due to any act, omission or occurrence in or about IC or the Building.</p>
+          <p>Except for gross or willful misconduct by the Company, Member agrees to indemnify, defend, protect and hold the Company and its respective board members, employees, volunteers, instructors, agents, contractors and officers harmless from and against all claims of whatever nature arising out of Member's use of the facilities and occupancy of the Company. Members are strongly encouraged to carry insurance that covers their personal equipment while using the workspace at The Inventors’ Center.</p>
+        </li>
+        <li>
+          <p><strong>Interruption of Service.</strong> Member acknowledges that due to the imperfect nature of electronic communications, electronics, and utilities, The Inventors’ Center shall not be responsible for damages, direct or consequential, which may result in the failure of IC to furnish any of the Services. The Company will, however, act in good faith and in a  commercially reasonable manner in working to remedy any flaws in the facilities or equipment or delays in providing access to the facilities or equipment to the Member.</p>
+        </li>
+        <li>
+          <p><strong>Relationship of the Parties.</strong> Member is not an employee or contractor of the Company. The Inventors’ Center has no right to the work produced by Members or guests working at the Company. Members shall maintain all copyrights, patents and any other proprietary rights related to the Member's works that are created using the facilities.</p>
+        </li>
+        <li>
+          <p><strong>Partial Invalidity.</strong> If any one or more of the provisions of this Agreement shall be invalid or unenforceable, the remainder of this Agreement shall not be affected, and each remaining provision shall be valid and enforceable to the fullest extent permitted by law.</p>
+        </li>
+        <li>
+          <p><strong>Waiver.</strong> No delay or omission on the part of The Inventors’ Center in exercising any right under this Agreement shall operate as a waiver of such right or of any other right of the Company, nor shall any waiver of such right or rights on any one occasion be deemed a bar to, or waiver of, the same right or rights on any future occasion. The acceptance by The Inventors’ Center of any payment, or of a sum less than is due, shall not be construed as a waiver of any of the Company's rights unless such waiver is in writing.</p>
+        </li>
+        <li>
+          <p class="warn">This agreement is not a lease and does not create or reflect any form of tenancy or interest in real property in favor of the member.</p>
+          <p>This Agreement is subject and subordinate to a lease by and between The Inventors’ Center and the owner of the Building. This Agreement shall terminate simultaneously with the termination of the said lease. This Agreement shall be governed by, interpreted and enforced in accordance with the laws of the State of Tennessee.</p>
+        </li>
+      </ol>
+    </form>
   </section>
   <section id="sig">
     <header>
@@ -461,28 +451,25 @@
       <li>
         <span>
           Printed Name:
-          <input
-            name="name"
-            value={param.name ?? ''}
-          />
+          <input name="name" value={param.name ?? ''}/>
         </span>
         <span>
           Date:
           <input
             type="date" name="date"
-            value={param.date ? (
-              param.date.toISOString().split('T').shift()
-            ) : ('')}
+            value={(param.date ?? new Date()).toISOString().split('T').shift()}
           />
         </span>
       </li>
-      <li>Signature: _________________________________________</li>
       <li>
-        Phone:
-        <input
-          name="phone" inputmode="numeric"
-          value={param.phone ?? ''}
-        />
+        <span>Signature: <input name="sig"/></span>
+        <span>
+          Phone:
+          <input
+            type="tel" name="phone" inputmode="numeric"
+            value={param.phone ?? ''}
+          />
+        </span>
       </li>
     </ul>
       <button class="hidden">Update</button>
@@ -506,6 +493,10 @@
     }
     & h1, & h2 {
       text-align: center;
+    }
+
+    & a {
+      display: flex;
     }
   }
   main {
@@ -614,6 +605,9 @@
   .hidden {
     display: none;
   }
+  input[name="sig"] {
+    flex-grow: 1;
+  }
   @media print {
     main {
       font-size: 12.5pt;
@@ -622,6 +616,9 @@
     p {
       margin-block: 0 0.25rem;
       padding: 0;
+    }
+    input {
+      border-bottom: 2px solid black;
     }
   }
 </style>
